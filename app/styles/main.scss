@@ -1,0 +1,149 @@
+@import "compass/reset";
+@import "compass";
+
+$KEY_SIZE     : 34px;
+$CONTROL_SIZE : $KEY_SIZE + 8px;
+$TOP          : 20px;
+$LEFT         : 50px;
+
+$WHITE        : #fff;
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,700);
+
+body{
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+
+  &.pointer{
+    cursor: pointer;
+  }
+}
+
+.mobile{
+  color: #ffffff;
+  background: #000000;
+  iframe{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  p{
+    line-height: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  div{
+    padding: 20px;
+  }
+}
+
+#text{
+  position: absolute;
+  overflow: hidden;
+
+  top: 50%;
+  left: 50%;
+
+  width: 500px;
+  height: 70px;
+  margin-left: -250px;
+  margin-top: 150px;
+
+
+  font-weight: 100;
+  font-size: 50px;
+  line-height: 1.4em;
+  text-align: center;
+  letter-spacing: 2px;
+
+  z-index: 100;
+  color: $WHITE;
+
+  @include transition(all 0.6s 1.2s);
+
+  &.active{
+    font-size: 22px;
+  }
+
+  #message{
+    font-weight: 700;
+  }
+
+
+}
+
+#click{
+
+  position: absolute;
+  overflow: hidden;
+
+  top: 50%;
+  left: 50%;
+
+  margin-left: -100px;
+  margin-top: -200px;
+
+  width: 200px;
+
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 3px;
+
+  color: $WHITE;
+
+  opacity: 0;
+
+  @include transition(all 0.2s);
+
+  &.active{
+    opacity: 0.6;
+  }
+}
+
+
+
+// loading
+#loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+
+  z-index: 1000;
+
+  .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: $WHITE;
+  }
+
+  .text{
+    font-weight: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+
+
+    font-size: 20px;
+
+    color: #000000;
+  }
+
+  @include transition(all 0.8s);
+  &.inactive{
+    opacity: 0;
+  }
+}
