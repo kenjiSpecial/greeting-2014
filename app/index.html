@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Threejs starter kit</title>
+        <title>HAPPY NEW YEAR 2014</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -21,6 +21,10 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+
+        <meta property="og:title" content="HAPPY NEW YEAR 2014 From Kenji Saito" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="http://kenjispecial.github.io/greeting-2014/images/thumbnail.png" />
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -46,8 +50,17 @@
             <div class="text">LOADING...</div>
         </div>
 
+        <!--add twitter button-->
+        <div id="twitter">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="HAPPY New Year 2014 from http://kenji-special.info/" data-via="kenji_special" data-count="none">Tweet</a>
+        </div>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-        <a href="https://github.com/kenjiSpecial/threejs-starter-kit"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+        <!--add fb button-->
+        <div id="fb">
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fkenjispecial.github.io%2Fgreeting-2014%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=358602027604226" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+        </div>
+
 
         <!-- build:js scripts/main.js -->
         <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>

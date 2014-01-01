@@ -147,3 +147,17 @@ body{
     opacity: 0;
   }
 }
+
+#twitter{
+  position: absolute;
+  bottom: 30px;
+  right: 120px;
+  z-index: 200;
+}
+
+#fb{
+  position: absolute;
+  bottom: 30px;
+  right: -200px;
+  z-index: 100;
+}
